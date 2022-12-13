@@ -1,0 +1,181 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2022-12-13T22:07:28.113Z",
+    "__export_source": "insomnia.desktop.app:v2022.6.0",
+    "resources": [
+        {
+            "_id": "req_39a3cb6ad791405c98a5352444c5ea36",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670963394657,
+            "created": 1670879951303,
+            "url": "http://localhost:3000/api/users/2",
+            "name": "deleteUniqueUser",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1670879951303,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "parentId": null,
+            "modified": 1670876604945,
+            "created": 1670876604945,
+            "name": "YCIT029 - Assignment",
+            "description": "",
+            "scope": "design",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_40b6f381f70b4fc48dfe1d1a74c9929d",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670969184891,
+            "created": 1670878322974,
+            "url": "http://localhost:3000/api/users/2",
+            "name": "updateUniqueUser",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\t\"name\": \"Lara Mauricio\",\n\t\t\"age\": 31\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1670878322974,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_a1a029859ec941f2ab70d0170824432e",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670963368924,
+            "created": 1670877653956,
+            "url": "http://localhost:3000/api/users/1",
+            "name": "readUniqueUser",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1670877653956,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_9d6b6bb2b8574bdb98947fe2d01985b2",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670969187128,
+            "created": 1670877211673,
+            "url": "http://localhost:3000/api/users",
+            "name": "CreateNewUser",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\t\"name\": \"Joanna Jones\",\n\t\t\"age\": 35\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1670877211673,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_dece7639f12e43d6898fa46c06a1e230",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670876825788,
+            "created": 1670876609727,
+            "url": "http://localhost:3000/api/users",
+            "name": "readAllUsers",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1670876609727,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_846e1a1f306790eebe98f5f251b1a8bb9b9f6c93",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670876604951,
+            "created": 1670876604951,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1670876604951,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_846e1a1f306790eebe98f5f251b1a8bb9b9f6c93",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670876604953,
+            "created": 1670876604953,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_8ca52264f3bd464199bcced93eca1827",
+            "parentId": "wrk_6936cf3981cb4eb59afaa1b4816f8ff9",
+            "modified": 1670876604946,
+            "created": 1670876604946,
+            "fileName": "YCIT029 - Assignment",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
