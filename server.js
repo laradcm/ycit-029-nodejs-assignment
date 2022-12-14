@@ -56,24 +56,19 @@ app.listen(PORT, () => {
 
 //------subroutines--------------
 function readAllUsers(req, res){
-  res.json(data);
+  res.send(data);
 }
 
 
 function createUser(req, res){
 
-  const validation = validate(req.body);
-
-  if (validation.error) {
-
-    res.json("Failed to create user," + validation.error.details[0].message);
-    return;
-  }
+  const {error} = validate(req.body);
+  if (error) return res.status(400).send("Failed to create user, " + error.details[0].message);
   
   const newUser = new user( generateId() , req.body.name , req.body.age );
   data.push(newUser);
 
-  res.json(data);
+  res.send(data[data.length-1]);
 }
 
 
@@ -82,7 +77,7 @@ function readUniqueUser(req, res){
   const id = parseInt(req.params.id);
   const uniqueUser = data.find( user => user.id === id );
 
-  uniqueUser? res.json(uniqueUser) : res.json("Failed to read user, user not found") ;
+  uniqueUser? res.send(uniqueUser) : res.status(404).send("Failed to read user, user ID not found");
 }
 
 
@@ -90,23 +85,16 @@ function updateUniqueUser(req, res){
 
   const id = parseInt(req.params.id);
   const userIndex = data.findIndex( user => user.id === id );
-  const validation = validate(req.body);
+  const {error} = validate(req.body);
 
-  if (userIndex < 0) {
+  if (userIndex < 0) return res.status(404).send("Failed to update user, user ID not found");
 
-    res.json("Failed to update user, user not found");
-    return;
-  }
-
-  if (validation.error) {
-    res.json("Failed to update user," + validation.error.details[0].message);
-    return;
-  }
+  if (error) return res.status(400).send("Failed to update user, " + error.details[0].message);
         
   const updatedUser = new user( id , req.body.name , req.body.age );
   data[userIndex] = updatedUser;
 
-  res.json(data); 
+  res.send(data[userIndex]); 
 }
 
 
@@ -116,15 +104,11 @@ function deleteUniqueUser(req, res){
   const id = parseInt(req.params.id);
   const userIndex = data.findIndex( user => user.id === id );
 
-  if (userIndex < 0) {
-
-    res.json("Failed to delete user, user not found");
-    return;
-  }
+  if (userIndex < 0) return res.status(404).send("Failed to delete user, user ID not found");
 
   data.splice(userIndex, 1);
 
-  res.json(data);
+  res.send(data);
 }
 
 
