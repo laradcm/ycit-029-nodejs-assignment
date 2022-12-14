@@ -5,7 +5,7 @@
 ```cmd
     npm i joi
 ```
-Alternatively you can install all npm packages from my package.JSON (which will include joi):
+Alternatively you can install all npm packages from my package.json (which will include joi):
 
 ```cmd
     npm i 
@@ -40,6 +40,6 @@ export PORT=3333
 
 6. Due to the increased complexity of generating random unique numbers with a higher number of users, this server is limited to a maximum of `15` users.
 
-7. I used the imsomnia client to test this server and have added my insomnia.json export to this github page for easy testing, upon importing the testing methods can be found on the `DEBUG` section. You can download imsomnia for free at: https://insomnia.rest/download
+7. I used the imsomnia client to test this server and have added my insomnia.json export to this github page for easy testing. Upon importing, the testing methods can be found on the `DEBUG` section. You can download imsomnia for free at: https://insomnia.rest/download
 
 
